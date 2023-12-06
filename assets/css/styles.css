@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+.foto {
+    height: 60vh;
+}
+
+#Ldestaque {
+    font-weight: bold;
+    color: red;
+}
+
+#remover{
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
+    #map {
+        height: 300px;
+        width: auto;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 1299px) {
+    #map {
+        height: 400px;
+        width: auto;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    #map {
+        height: 600px;
+        width: auto;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+    <title>Parques Nacionais</title>
+</head>
+
+<body>
+
+    <header>
+        <!--Início do menu de navegação-->
+        <nav class="navbar navbar-expand-lg bg-info bg-gradient fs-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/logo.png" alt="Logo" width="96" height="64"
+                        class="d-inline-block align-text-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active text-light mx-4" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-light mx-4" href="#">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-light mx-4" href="#">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Fim do menu de navegação-->
+    </header>
+
+    <main>
+        <div class="h4 pb-2 mb-4 text-black border-bottom border-black m-3">
+            Destaque
+        </div>
+
+        <!--Início do carousel-->
+        <div class="container-fluid">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide p-5" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5"
+                        aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6"
+                        aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="7"
+                        aria-label="Slide 8"></button>
+                </div>
+                <div id="carrossel" class="carousel-inner">
+                    
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!--Fim do carousel-->
+
+        <div class="h4 pb-2 mb-4 text-black border-bottom border-black m-3">
+            Mapa
+        </div>
+
+
+        <!-- DIV que receberá o mapa -->
+        <div class="container-fluid">
+
+            <div id="map"></div>
+
+        </div>
+
+        <!--Fim da DIV que receberá o mapa -->
+
+        <div class="h4 pb-2 mb-4 text-black border-bottom border-black m-3">
+            Lista de Álbuns
+        </div>
+        <!-- Inicio dos cards-->
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4 m-3">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/img/img001.jpg" class="card-img-top" alt="Foto do Parque Nacional de Yosemite">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Parque Nacional de Yosemite</h5>
+                        <p class="card-text">O Parque Nacional de Yosemite (em inglês: Yosemite National Park) é um
+                            parque nacional norte-americano localizado nas montanhas da Serra Nevada, no estado da
+                            Califórnia, nos condados de Mariposa e Tuolumne.</p>
+                        <a href="album.html?id=1" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/img/img013.jpg" class="card-img-top" alt="Foto do Parque Nacional Zhangjiajie">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Parque Nacional Zhangjiajie</h5>
+                        <p class="card-text">Parque Nacional Zhangjiajie é um parque florestal nacional localizado em
+                            Zhangjiajie, província de Hunan, China. É um dos vários parques nacionais dentro da área
+                            cênica de Wulingyuan.</p>
+                        <a href="album.html?id=2" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/img/img025.jpg" class="card-img-top" alt="Foto do Parque Nacional de Fiordland">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Parque Nacional de Fiordland</h5>
+                        <p class="card-text">O Parque Nacional de Fiordland é uma região neozelandesa situado no extremo
+                            sudoeste da Ilha Sul. É uma região montanhosa de relevo agreste com numerosas cascatas,
+                            muitas das quais lançam nas suas águas no Mar da Tasmânia.</p>
+                        <a href="album.html?id=3" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/img/img037.jpg" class="card-img-top" alt="Foto do Parque Nacional de Banff">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Parque Nacional de Banff</h5>
+                        <p class="card-text">O Parque Nacional Banff é um parque nacional canadense e o mais velho do
+                            Canadá, estabelecido em 1885 nas montanhas rochosas. O parque está localizado a 110-180 km a
+                            oeste de Calgary, na província de Alberta, abrangendo cerca de 6641km².</p>
+                        <a href="album.html?id=4" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/img/img049.jpg" class="card-img-top" alt="Foto do Parque Nacional de Serenguéti">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Parque Nacional de Serenguéti</h5>
+                        <p class="card-text">O Parque Nacional de Serenguéti é um parque nacional de
+                            grandes dimensões (cerca de 40000km²) na ecorregião de Serenguéti, no norte da Tanzânia e
+                            sudoeste do Quênia, na África Oriental.</p>
+                        <a href="album.html?id=5" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/img/img061.jpg" class="card-img-top" alt="Foto do Parque Nacional de Galápagos">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Parque Nacional de Galápagos</h5>
+                        <p class="card-text">O Parque Nacional Galápagos é uma área de preservação natural do Equador,
+                            localizada nas ilhas que lhe dão o nome, o arquipélago de Galápagos.</p>
+                        <a href="album.html?id=6" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/img/img073.jpg" class="card-img-top" alt="Foto do Parque Nacional Kruger">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Parque Nacional Kruger</h5>
+                        <p class="card-text">O Parque Nacional Kruger é a maior área protegida de fauna bravia da África
+                            do Sul, cobrindo cerca de 19.485 km². Ele está localizado no nordeste do país, nas
+                            províncias de Mpumalanga e Limpopo.
+                            <a href="album.html?id=7" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/img/img085.jpg" class="card-img-top"
+                        alt="Foto do Parque Nacional dos Lençóis Maranhenses">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Parque Nacional dos Lençóis Maranhenses</h5>
+                        <p class="card-text">O Parque Nacional dos Lençóis Maranhenses é uma unidade de conservação
+                            brasileira de proteção integral à natureza localizada na região nordeste do estado do
+                            Maranhão.</p>
+                        <a href="album.html?id=8" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fim dos cards-->
+    </main>
+
+    <footer>
+        <div class="h4 pb-2 mb-4 text-black border-bottom border-black m-3">
+            Créditos
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8 col-sm-12">
+                    <p class="text-primary fw-bold">Sobre</p>
+                    <p>Site sobre parques nacionais com várias informações e fotos de parques como:</p>
+                    <ul>
+                        <li>Parque Nacional de Yosemite</li>
+                        <li>Parque Nacional Zhangjiajie</li>
+                        <li>Parque Nacional de Fiordland</li>
+                        <li>Parque Nacional de Banff</li>
+                        <li>Parque Nacional de Serenguéti</li>
+                        <li>Parque Nacional de Galápagos</li>
+                        <li>Parque Nacional Kruger</li>
+                        <li>Parque Nacional dos Lençóis Maranhenses</li>
+                    </ul>
+
+                </div>
+                <div class="col-md-4 col-sm-12">
+
+                    <div class="container">
+                        <p class="text-primary fw-bold">Autoria</p>
+                        <img class="float-start" src="assets/img/user-icon.png" alt="Logo User" width="72" height="72">
+                        <span class="fw-bold inline">Aluno: </span><span>Vinicius Xavier Ramalho</span><br>
+                        <span class="fw-bold inline">Curso: </span><span>Sistemas de Informação</span><br>
+                        <span class="fw-bold inline">Turma: </span><span>Noite</span><br>
+                    </div>
+                    <div class="container mt-3">
+                        <span class="text-primary fw-bold">Redes Sociais: </span>
+                        <a href="index.html">
+                            <img class="mx-3" src="assets/img/facebook.svg" alt="Logo Facebook" width="32" height="32">
+                        </a>
+                        <a href="index.html">
+                            <img class="mx-3" src="assets/img/twitter.svg" alt="Logo Twitter" width="32" height="32">
+                        </a>
+                        <a href="index.html">
+                            <img class="mx-3" src="assets/img/instagram.svg" alt="Logo Instagram" width="32"
+                                height="32">
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <script src="assets/js/script.js"></script>"
+</body>
+
+</html>
